@@ -30,7 +30,7 @@ library:
   source-dirs: src
 
 executables:
-  horner:
+  horn:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -41,7 +41,7 @@ executables:
     - horner
 
 tests:
-  horner-test:
+  horn-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
