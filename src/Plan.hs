@@ -109,14 +109,3 @@ getReadingForList day bibleBooks = bibleBooks !! index
   where
     totalNumChapters = toInteger $ length bibleBooks
     index = fromInteger $ (day - 1) `mod` totalNumChapters
-
---setReadingForList :: Integer -> Integer -> BibleBook -> BibleBook
---setReadingForList day totalNumChapters book = book & over currentChapter setCurrentReading
---  where
---    setCurrentReading = const (calculateReading day (book ^. chapters))
---
---calculateReading :: Integer -> Integer -> Integer
---calculateReading day chapters
---  | chapters == 1 = chapters
---  | day >= chapters = (day + 1) `mod` chapters
---  | otherwise = day `mod` chapters
